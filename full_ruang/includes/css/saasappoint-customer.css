@@ -1,0 +1,1269 @@
+/*
+* SaasAppoint
+* Online Multi Business Appointment Scheduling & Reservation Booking Calendar
+*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.saasappoint {
+  overflow-x: hidden;
+}
+
+.saasappoint.saasappoint-sticky-footer {
+  margin-bottom: 56px;
+}
+
+.saasappoint.saasappoint-sticky-footer .saasappoint-content-wrapper {
+  min-height: calc(100vh - 56px - 56px);
+}
+
+.saasappoint.fixed-nav {
+  padding-top: 56px;
+}
+
+.saasappoint-content-wrapper {
+  min-height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+
+.saasappoint .scroll-to-top {
+  position: fixed;
+  right: 15px;
+  bottom: 3px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: white;
+  background: rgba(52, 58, 64, 0.5);
+  line-height: 45px;
+}
+
+.saasappoint .scroll-to-top:focus, .scroll-to-top:hover {
+  color: white;
+}
+
+.saasappoint .scroll-to-top:hover {
+  background: #343a40;
+}
+
+.saasappoint .scroll-to-top i {
+  font-weight: 800;
+}
+
+.saasappoint .smaller {
+  font-size: 0.7rem;
+}
+
+.saasappoint .o-hidden {
+  overflow: hidden !important;
+}
+
+.saasappoint .z-0 {
+  z-index: 0;
+}
+
+.saasappoint .z-1 {
+  z-index: 1;
+}
+
+#saasappoint-mainnav .navbar-collapse {
+  overflow: auto;
+  max-height: 75vh;
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav .nav-item .nav-link {
+  cursor: pointer;
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+  float: right;
+  content: '\f107';
+  font-family: 'FontAwesome';
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after {
+  content: '\f105';
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link {
+  position: relative;
+  min-width: 45px;
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
+  float: right;
+  width: auto;
+  content: '\f105';
+  border: none;
+  font-family: 'FontAwesome';
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link .indicator {
+  position: absolute;
+  top: 0px;
+  left: 21px;
+  font-size: 14px;
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown.show > .nav-link:after {
+  content: '\f107';
+}
+
+#saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown .dropdown-menu > .dropdown-item > .dropdown-message {
+  overflow: hidden;
+  max-width: none;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 992px) {
+  #saasappoint-mainnav .navbar-brand {
+    width: 250px;
+  }
+  #saasappoint-mainnav .navbar-collapse {
+    overflow: visible;
+    max-height: none;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-sidenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 56px;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-sidenav > .nav-item {
+    width: 250px;
+    padding: 0;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+    padding: 1em;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link {
+    min-width: 0;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
+    width: 24px;
+    text-align: center;
+  }
+  #saasappoint-mainnav .navbar-collapse .navbar-nav > .nav-item.dropdown .dropdown-menu > .dropdown-item > .dropdown-message {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  #saasappoint-mainnav.fixed-top .navbar-sidenav {
+    /* height: calc(100vh - 112px); */
+    height: calc(91vh - 5px);
+  }
+}
+
+.saasappoint .saasappoint-content-wrapper {
+  overflow-x: hidden;
+  background: white;
+}
+
+@media (min-width: 992px) {
+  .saasappoint .saasappoint-content-wrapper {
+    margin-left: 250px;
+  }
+}
+
+.saasappoint .navbar-sidenav-tooltip.show {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .saasappoint.sidenav-toggled .saasappoint-content-wrapper {
+    margin-left: 55px;
+  }
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav {
+  width: 55px;
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-link-text {
+  display: none;
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-item,
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-link {
+  width: 55px !important;
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-item:after,
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-link:after {
+  display: none;
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav .nav-item {
+  white-space: nowrap;
+}
+
+.saasappoint.sidenav-toggled .navbar-sidenav-tooltip.show {
+  display: flex;
+}
+
+#saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+  color: #868e96;
+}
+
+#saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+  color: #868e96;
+}
+
+#saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+  color: #adb5bd;
+}
+
+#saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
+  color: #adb5bd;
+}
+
+@media (min-width: 992px) {
+  #saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav {
+    background: #343a40;
+  }
+  #saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav li.active a {
+    color: white !important;
+    background-color: #495057;
+  }
+  #saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav li.active a:focus,
+  #saasappoint-mainnav.navbar-dark .navbar-collapse .navbar-sidenav li.active a:hover {
+    color: white;
+  }
+}
+
+#saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#saasappoint-mainnav.navbar-light .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 992px) {
+  #saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav {
+    background: #f8f9fa;
+  }
+  #saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav li.active a {
+    color: #000 !important;
+    background-color: #e9ecef;
+  }
+  #saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav li.active a:focus,
+  #saasappoint-mainnav.navbar-light .navbar-collapse .navbar-sidenav li.active a:hover {
+    color: #000;
+  }
+}
+
+.saasappoint .card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: -25px;
+  right: -25px;
+  font-size: 5rem;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+@media (min-width: 576px) {
+  .saasappoint .card-columns {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .saasappoint .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .saasappoint .card-columns {
+    column-count: 2;
+  }
+}
+
+.saasappoint .card-login {
+  max-width: 25rem;
+}
+
+.saasappoint .card-register {
+  max-width: 40rem;
+}
+
+.saasappoint footer.saasappoint-sticky-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 56px;
+  background-color: #e9ecef;
+  line-height: 55px;
+}
+
+@media (min-width: 992px) {
+  .saasappoint footer.saasappoint-sticky-footer {
+    width: calc(100% - 250px);
+  }
+}
+
+@media (min-width: 992px) {
+  .saasappoint.sidenav-toggled footer.saasappoint-sticky-footer {
+    width: calc(100% - 55px);
+  }
+}
+
+/* custom css */
+#saasappoint-resetPassword-error,
+#saasappoint-forgetPassword-error,
+#saasappoint-login-error{
+	display: none;
+}
+.saasappoint #saasappoint_upgrade_plan_card_errors,
+.saasappoint .error{
+	color: red !important;
+}
+#saasappoint-resetPassword-success,
+#saasappoint-forgetPassword-success{
+	display:none;
+	color:green;
+}
+.saasappoint-white{
+	color: white !important;
+}
+
+
+/* For student and staff form wizard */
+.saasappoint .update-stepwizard-step p,
+.saasappoint .stepwizard-step p {
+    margin-top: 10px;
+}
+.saasappoint .update-stepwizard-row,
+.saasappoint .stepwizard-row {
+    display: table-row;
+}
+.saasappoint .update-stepwizard,
+.saasappoint .stepwizard {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+.saasappoint .update-stepwizard-step button[disabled],
+.saasappoint .stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.saasappoint .update-stepwizard-row:before,
+.saasappoint .stepwizard-row:before {
+    top: 22px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.saasappoint .update-stepwizard-step,
+.saasappoint .stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.saasappoint .btn-circle {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 20px;
+    line-height: 1.428571429;
+    border-radius: 22px;
+}
+/* For student and staff form wizard */
+
+/* Image upload css */
+.saasappoint .saasappoint-image-upload {
+  position: relative;
+  max-width: 205px;
+  margin: auto;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-edit-icon {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-edit-icon input {
+  display: none;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-edit-icon input + label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-edit-icon input + label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-edit-icon input + label:after {
+  content: "\f040";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.saasappoint .saasappoint-image-upload .saasappoint-image-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Image upload css */
+
+.saasappoint .saasappoint-sub-classes-checkbox li{
+	display: inline;
+	padding-right: 1%;
+}
+
+/*******************************/
+/* The container */
+.saasappoint_chkbox_container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.saasappoint_chkbox_container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.saasappoint_checkmark {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #ff0404;
+}
+
+/* On mouse-over, add a grey background color */
+.saasappoint_chkbox_container:hover input ~ .saasappoint_checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.saasappoint_chkbox_container input:checked ~ .saasappoint_checkmark {
+    background-color: #1e7e34;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.saasappoint_checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.saasappoint_chkbox_container input:checked ~ .saasappoint_checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.saasappoint_chkbox_container .saasappoint_checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*******************************/
+.mb-50{
+	margin-bottom:50px;
+}
+.mb-10{
+	margin-bottom:10px;
+}
+.mt-7{
+	margin-top:7px;
+}
+.mb-20{
+	margin-bottom:20px;
+}
+.filter-border{
+	border: 2px solid #e9ecef;
+	border-radius:5px;
+	padding:20px;
+}
+
+/*****************Settings Tabs*****************/
+/* Tabs panel */
+.saasappoint-tabbable-panel {
+  border:1px solid #eee;
+  padding: 10px;
+}
+.saasappoint-tabbable-line > .nav-tabs {
+  border: none;
+  margin: 0px;
+}
+.saasappoint-tabbable-line > .nav-tabs > li {
+  margin-right: 2px;
+}
+.saasappoint-tabbable-line > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: #737373;
+}
+.saasappoint-tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.open, .saasappoint-tabbable-line > .nav-tabs > li:hover {
+  border-bottom: 4px solid #fbcdcf;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.open > a, .saasappoint-tabbable-line > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #333333;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.open > a > i, .saasappoint-tabbable-line > .nav-tabs > li:hover > a > i {
+  color: #a6a6a6;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.open .dropdown-menu, .saasappoint-tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.active {
+  border-bottom: 4px solid #f3565d;
+  position: relative;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #333333;
+}
+.saasappoint-tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+.saasappoint-tabbable-line > .tab-content {
+  margin-top: -3px;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.saasappoint .new-appointments-dropdown-menu{
+	height:500px;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+.saasappoint .dropdown-menu-titles{
+	color: grey;
+}
+.fc-today{
+	background-color: #f5ecc2 !important;
+}
+.saasappoint-hr{
+	height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 7px 0 1px 0;
+    padding: 0; 
+}
+.fc-event-time, .fc-event-title {
+	padding: 0 1px;
+	white-space: nowrap;
+}
+.saasappoint-fc-title {
+	white-space: normal;
+}
+
+.saasappoint-legend { list-style: none; }
+.saasappoint-legend li { float: left; margin-right: 10px; }
+.saasappoint-legend span { float: left; width: 13px; height: 13px; margin: 7px 5px 2px 2px; }
+.saasappoint-legend .saasappoint_rescheduled_by_customer { color: #04B4AE; }
+.saasappoint-legend .saasappoint_rescheduled_by_you { color: #6960EC; }
+.saasappoint-legend .saasappoint_confirmed { color: green; }
+.saasappoint-legend .saasappoint_pending { color: #1589FF; }
+.saasappoint-legend .saasappoint_cancelled_by_customer { color: #FF4500; }
+.saasappoint-legend .saasappoint_rejected_by_you { color: #F70D1A; }
+.saasappoint-legend .saasappoint_completed { color: #b7950b; }
+.saasappoint-legend .saasappoint_rescheduled_by_customer span { border: 1px solid #04B4AE; background-color: #04B4AE; }
+.saasappoint-legend .saasappoint_rescheduled_by_you span { border: 1px solid #6960EC; background-color: #6960EC; }
+.saasappoint-legend .saasappoint_confirmed span { border: 1px solid green; background-color: green; }
+.saasappoint-legend .saasappoint_pending span { border: 1px solid #1589FF; background-color: #1589FF; }
+.saasappoint-legend .saasappoint_cancelled_by_customer span { border: 1px solid #FF4500; background-color: #FF4500; }
+.saasappoint-legend .saasappoint_rejected_by_you span { border: 1px solid #F70D1A; background-color: #F70D1A; }
+.saasappoint-legend .saasappoint_completed span { border: 1px solid #b7950b; background-color: #b7950b; }
+
+.fc-event-dot{
+	width:13px;
+	height:13px;
+}
+
+.saasappoint-subscription-pricing{padding:30px 0}
+.saasappoint-subscription-pricing-table{background:#000;padding-bottom:20px;overflow:hidden}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header{margin-bottom:40px;position:relative;z-index:1}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:before{content:"";width:100%;height:150%;background:#606aa3;position:absolute;top:-90%;left:-20%;z-index:-1;transform:rotate(-42deg)}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:after{content:"";width:100%;height:190%;background:#727cb6;position:absolute;top:-76%;right:-16%;z-index:-2;transform:rotate(20deg)}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-table-price,.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-title{display:inline-block;width:50%;padding:30px 0;color:#fff;line-height:20px}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-table-price{float:left;font-size:30px;position:relative;top:10px;left:20px}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-table-currency{font-size:20px;position:relative;top:-10px;right:-3px}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-title{margin:0;font-size:20px;font-weight:700;text-transform:uppercase;position:relative;top:10px;right:7px}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-content{list-style:none;padding:0;margin:0 0 20px;text-align:center;clear:both}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-content li{font-size:17px;color:#fff;line-height:40px}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button{display:block;width:80%;padding:10px 0;text-align:center;border:1px solid #606aa3;border-radius:40px;margin:0 auto;font-size:18px;color:#606aa3;z-index:1;text-transform:uppercase;overflow:hidden;position:relative;text-decoration:none}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:after,.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:before{content:"";border-width:0;border-style:solid;position:absolute;z-index:-1;transition:all .7s ease 0s}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:before{border-color:transparent transparent transparent #606aa3;bottom:0;left:0}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:after{border-color:transparent #606aa3 transparent transparent;top:0;right:0}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:hover:after,.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-button:hover:before{border-width:150px 262px}
+.saasappoint-subscription-pricing-table.green .saasappoint-subscription-pricing-table-header:before{background:#18a288}
+.saasappoint-subscription-pricing-table.green .saasappoint-subscription-pricing-table-header:after{background:#1abc9c}
+.saasappoint-subscription-pricing-table.green .saasappoint-subscription-pricing-table-button{border-color:#1abc9c;color:#1abc9c}
+.saasappoint-subscription-pricing-table.green .saasappoint-subscription-pricing-table-button:before{border-color:transparent transparent transparent #18a288}
+.saasappoint-subscription-pricing-table.green .saasappoint-subscription-pricing-table-button:after{border-color:transparent #18a288 transparent transparent}
+.saasappoint-subscription-pricing-table.orange .saasappoint-subscription-pricing-table-header:before{background:#ee6e00}
+.saasappoint-subscription-pricing-table.orange .saasappoint-subscription-pricing-table-header:after{background:#e67e22}
+.saasappoint-subscription-pricing-table.orange .saasappoint-subscription-pricing-table-button{border-color:#e67e22;color:#e67e22}
+.saasappoint-subscription-pricing-table.orange .saasappoint-subscription-pricing-table-button:before{border-color:transparent transparent transparent #ee6e00}
+.saasappoint-subscription-pricing-table.orange .saasappoint-subscription-pricing-table-button:after{border-color:transparent #ee6e00 transparent transparent}
+.saasappoint-subscription-pricing-table.purple .saasappoint-subscription-pricing-table-header:before{background:#b14468}
+.saasappoint-subscription-pricing-table.purple .saasappoint-subscription-pricing-table-header:after{background:#cf4d78}
+.saasappoint-subscription-pricing-table.purple .saasappoint-subscription-pricing-table-button{border-color:#cf4d78;color:#cf4d78}
+.saasappoint-subscription-pricing-table.purple .saasappoint-subscription-pricing-table-button:before{border-color:transparent transparent transparent #b14468}
+.saasappoint-subscription-pricing-table.purple .saasappoint-subscription-pricing-table-button:after{border-color:transparent #b14468 transparent transparent}
+@media only screen and (max-width:990px){.saasappoint-subscription-pricing-table{margin-bottom:30px}
+}
+@media only screen and (max-width:767px){.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:before{height:300%;top:-267%}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:after{height:270%;top:-106%}
+.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-title{text-align:center}
+}
+@media only screen and (max-width:480px){.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:after{top:-146%}
+#saasappoint-notification-dropdown-content{ width: 320px !important; }
+}
+@media only screen and (max-width:479px){.saasappoint-subscription-pricing-table .saasappoint-subscription-pricing-table-header:before{height:200%;top:-120%;left:-20%}
+#saasappoint-notification-dropdown-content{ width: 320px !important; }
+}
+
+.saasappoint-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.saasappoint-toggle-switch .saasappoint-toggle-switch-input {display:none;}
+
+.saasappoint-toggle-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.saasappoint-toggle-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.saasappoint-toggle-switch-input:checked + .saasappoint-toggle-switch-slider {
+  background-color: #2196F3;
+}
+
+.saasappoint-toggle-switch-input:focus + .saasappoint-toggle-switch-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.saasappoint-toggle-switch-input:checked + .saasappoint-toggle-switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.saasappoint-subscription-detail-box{
+	border: 5px solid #e0e0e0;
+	border-radius: 8px;
+	padding: 15px;
+}
+
+.saasappoint-subscription-detail-box tr td,
+.saasappoint-subscription-detail-box tr th{
+	padding:3px 10px;
+}
+.saasappoint-bb{
+	border-bottom:1px dotted #000;
+}
+#saasappoint_guest_customers_detail{
+	width: 100% !important;
+}
+.saasappoint_hr{
+	margin: 2px 0 !important;
+	border-top: 1px dashed rgba(5, 5, 5, 0.29) !important;
+}
+.saasappoint_appt_hr{
+	width: 30% !important;
+	margin: 2px 0 !important;
+	border-top: 1px dashed rgba(5, 5, 5, 0.29) !important;
+}
+.saasappoint-mb-5{
+	margin-bottom: 10px;
+}
+.saasappoint-mt-20{
+	margin-top: 20px;
+}
+.saasappoint-mb-2{
+	margin-bottom: 2px;
+}
+.saasappoint-mt-2{
+	margin-top: 2px;
+}
+.saasappoint-mt-10{
+	margin-top: 10px;
+}
+.saasappoint-ml-2{
+	margin-left: 2px;
+}
+.saasappoint-mr-2{
+	margin-right: 2px;
+}
+.saasappoint-fullwidth{
+	width:100%;
+}
+.saasappoint-hide{
+	display:none !important;
+}
+#saasappoint_feedback_list_table .fa-star{
+	color: orange !important;
+}
+#saasappoint-notification-dropdown-content{
+	width: 450px;
+	padding: 12px;
+}
+#saasappoint-notification-dropdown-content .saasappoint_noti_rescheduled_by_customer { color: #04B4AE; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_rescheduled_by_you { color: #6960EC; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_confirmed { color: green; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_pending { color: #1589FF; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_cancelled_by_customer { color: #FF4500; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_rejected_by_you { color: #F70D1A; }
+#saasappoint-notification-dropdown-content .saasappoint_noti_completed { color: #b7950b; }
+
+#saasappoint-notification-dropdown-content .saasappoint_noti_deatil { color: #786D5F; }
+
+#saasappoint-menu-accordion{
+	overflow-x: hidden;
+}
+
+
+/** Loader CSS START **/
+.saasappoint_hide_loader{
+	display:none;
+}
+.saasappoint_show_loader{
+	display:none;
+}
+#saasappoint-loader-overlay{
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #000000;
+	opacity: .5;
+}
+#saasappoint-loader {
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -20%;
+    width: 250px;
+	z-index: 999999;
+}
+#saasappoint-loader .saasappoint-loader-dot {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot::before {
+    border-radius: 100%;
+    content: "";
+    height: 120px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1) {
+    transform: rotate(45deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1)::before {
+    animation: 0.8s linear 0.1s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2) {
+    transform: rotate(90deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2)::before {
+    animation: 0.8s linear 0.2s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3) {
+    transform: rotate(135deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3)::before {
+    animation: 0.8s linear 0.3s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4) {
+    transform: rotate(180deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4)::before {
+    animation: 0.8s linear 0.4s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5) {
+    transform: rotate(225deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5)::before {
+    animation: 0.8s linear 0.5s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6) {
+    transform: rotate(270deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6)::before {
+    animation: 0.8s linear 0.6s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7) {
+    transform: rotate(315deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7)::before {
+    animation: 0.8s linear 0.7s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8) {
+    transform: rotate(360deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8)::before {
+    animation: 0.8s linear 0.8s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-loading {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: -40px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 180px;
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+/** Loader CSS END **/
+
+
+/** Collapsible CSS Start **/
+.saasappoint_collapsible {
+  background-color: #9b9b9b;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius:3px;
+}
+
+.saasappoint_collapsible_active, .saasappoint_collapsible:hover {
+  background-color: #555;
+}
+
+.saasappoint_collapsible:after {
+  /* content: '\002B'; */
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.saasappoint_collapsible_active:after {
+  /* content: "\2212"; */
+}
+
+.saasappoint_collapsible_content {
+  padding: 20px;
+  max-height: auto;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+/** Collapsible CSS End **/
+
+.saasappoint-view-modal-image{
+	border-radius: 10px;
+    margin-right: 20px;
+    float: left;
+	width: 256px;
+	height: 256px;
+}
+
+.saasappoint-view-addon-modal-image{
+	border-radius: 10px;
+    margin-right: 20px;
+    float: left;
+	width: 130px;
+	height: 130px;
+}
+
+.saasappoint-notification-appointment-modal-link{
+	cursor: pointer;
+}
+
+.saasappoint-subscription-pricing-table-content{
+	height: 200px;
+	overflow-x: hidden;
+}
+
+/** Support Ticket Discussion CSS start **/
+.saasappoint_support_ticket_window {
+  position: relative;
+  width: calc(100% - 20px);
+  height: 1030px;
+  border-radius: 10px;
+  background-color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #00b60933;
+  overflow: hidden;
+}
+
+.saasappoint_support_ticket_topmenu {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 0 15px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #a3dab9;
+  height: 250px;
+  overflow-x: hidden;
+}
+
+.saasappoint_support_ticket_topmenu .saasappoint_support_ticket_topmenu_title {
+  text-align: center;
+  padding: 10px 15px 0 15px;
+  font-weight: bold;
+  color: #000;
+  font-size: 20px;
+}
+
+.saasappoint_support_ticket_topmenu .saasappoint_support_ticket_topmenu_description {
+  padding: 10px 15px 0 15px;
+  color: #7e7e7e;
+  font-size: 20px;
+}
+
+.saasappoint_support_ticket_topmenu .saasappoint_support_ticket_topmenu_datetime {
+  color: #7e7e7e;
+  text-align: end;
+  float: right;
+}
+
+.saasappoint_support_ticket_reply_list {
+  position: relative;
+  list-style: none;
+  padding: 20px 10px 0 10px;
+  margin: 0;
+  height: 690px;
+  overflow-x: hidden;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_left .saasappoint_support_ticket_reply_wrapper {
+  background-color: #3f3737;
+  margin-left: 20px;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_left .saasappoint_support_ticket_reply_wrapper::after, .saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_left .saasappoint_support_ticket_reply_wrapper::before {
+  right: 100%;
+  border-right-color: #3f3737;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_left .saasappoint_support_ticket_reply_wrapper_content,
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_left p {
+  color: #ffffff;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply p {
+  font-weight:bold;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_right .saasappoint_support_ticket_reply_wrapper {
+  background-color: #ffffff;
+  margin-right: 20px;
+  float: right;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_right .saasappoint_support_ticket_reply_wrapper::after, .saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_right .saasappoint_support_ticket_reply_wrapper::before {
+  left: 100%;
+  border-left-color: #ffffff;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_on_right .saasappoint_support_ticket_reply_wrapper_content {
+  color: #000000;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply.saasappoint_show_support_ticket_reply {
+  opacity: 1;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper {
+  display: inline-block;
+  padding: 20px;
+  border-radius: 6px;
+  width: calc(100% - 85px);
+  min-width: 100px;
+  position: relative;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper::after, .saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper:before {
+  top: 18px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper::after {
+  border-width: 13px;
+  margin-top: 0px;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper::before {
+  border-width: 15px;
+  margin-top: -2px;
+}
+.saasappoint_support_ticket_reply_list .saasappoint_support_ticket_reply .saasappoint_support_ticket_reply_wrapper .saasappoint_support_ticket_reply_wrapper_content {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.saasappoint_support_ticket_send_reply_wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 0;
+}
+.saasappoint_support_ticket_send_reply_wrapper .saasappoint_support_ticket_send_reply_input_wrapper {
+  display: inline-block;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #bcbdc0;
+  width: calc(100% - 160px);
+  position: relative;
+  padding: 0 20px;
+}
+.saasappoint_support_ticket_send_reply_wrapper .saasappoint_support_ticket_send_reply_input_wrapper .saasappoint_support_ticket_reply_input {
+  border: none;
+  height: 100%;
+  box-sizing: border-box;
+  width: calc(100% - 40px);
+  position: absolute;
+  outline-width: 0;
+  color: gray;
+}
+.saasappoint_support_ticket_send_reply_wrapper .saasappoint_support_ticket_send_reply_btndiv {
+  width: 140px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 50px;
+  background-color: #3f3737;
+  border: 2px solid #3f3737;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  text-align: center;
+  float: right;
+}
+.saasappoint_support_ticket_send_reply_wrapper .saasappoint_support_ticket_send_reply_btndiv:hover {
+  color: #000;
+  background-color: #00b60933;
+}
+.saasappoint_support_ticket_send_reply_wrapper .saasappoint_support_ticket_send_reply_btndiv .saasappoint_support_ticket_reply_wrapper_content {
+  font-size: 18px;
+  font-weight: 300;
+  display: inline-block;
+  line-height: 48px;
+}
+
+.saasappoint_support_ticket_reply_template {
+  display: none;
+}
+/** Support Ticket Discussion CSS end **/
+
+/***ADDED **/
+.saasappoint_datatable_strip{
+	background-color: #e6e6e699 !important;
+}
+
+/** Star rating CSS */
+.saasappoint_feedback_star_list,
+.saasappoint-sidebar-feedback-star-checked{
+	color: orange;
+}
+.saasappoint_feedback_star_list,
+.saasappoint-sidebar-feedback-star{
+	font-size:xx-large;
+}
+
+
+/** Refund Request CSS start **/
+#saasappoint-refund-dropdown-content{
+	width: 450px;
+	padding: 12px;
+}
+#saasappoint-refund-dropdown-content .saasappoint_noti_rescheduled_by_customer { color: #04B4AE; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_rescheduled_by_you { color: #6960EC; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_confirmed { color: green; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_pending { color: #1589FF; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_cancelled_by_customer { color: #FF4500; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_rejected_by_you { color: #F70D1A; }
+#saasappoint-refund-dropdown-content .saasappoint_noti_completed { color: #b7950b; }
+
+#saasappoint-refund-dropdown-content .saasappoint_noti_deatil { color: #786D5F; }
+
+
+.saasappoint-refund-appointment-modal-link{
+	cursor: pointer;
+}
+
+@media only screen and (max-width:480px){
+#saasappoint-refund-dropdown-content{ width: 320px !important; }
+}
+@media only screen and (max-width:479px){
+#saasappoint-refund-dropdown-content{ width: 320px !important; }
+}
+
+#saasappoint-refund-policy-block{
+	max-height: 400px;
+	overflow-x: hidden;
+	padding: 2%;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 5%;
+}
+/** Refund Request CSS end **/
+
+/*** Reffer Box CSS Start */
+.saasappoint_refer_box.border_double{
+	border: 5px dashed #000;
+	background: #f7f7f7;
+	transition: border 2s;
+}
+.saasappoint_refer_input input {
+  cursor: pointer;
+}
+.saasappoint_refer_input input {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid rgba(0, 0, 0, 0.09);
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  color: rgba(135, 135, 135, 0.9);
+  background: rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  transition: all 300ms ease;
+}
+.saasappoint_refer_input input:hover, 
+.saasappoint_refer_input input:focus, 
+.saasappoint_refer_input input:active {
+  border-color: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+/*** Reffer Box CSS END */
+
+.intl-tel-input.allow-dropdown.separate-dial-code{
+	width: 100%
+}

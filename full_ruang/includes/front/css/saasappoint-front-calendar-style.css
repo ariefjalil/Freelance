@@ -1,0 +1,194 @@
+.saasappoint-inline-calendar-container-boxshadow {
+  border-color: #9087ba;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.18);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+.saasappoint-inline-calendar-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* padding-bottom: 100%; */
+  overflow: hidden;
+}
+.saasappoint-inline-calendar-container-main {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; */
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.saasappoint-inline-calendar-container-main-row {
+  display: flex;
+  justify-content: flex-start;
+}
+.saasappoint-inline-calendar-container-main-rowcol {
+  width: calc(100% / 7);
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  font-size: 15px;
+}
+.saasappoint-inline-calendar-container-main-rowcel {
+  margin: 3%;
+  position: relative;
+  width: calc(100% / 7);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.saasappoint-inline-calendar-container-main-rowcel p {
+  font-size:20px;
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 576px) {
+  .saasappoint-inline-calendar-container-main-rowcel{
+    margin:1%;
+  }
+  .saasappoint-inline-calendar-container-main-rowcel p {
+    font-size:15px;
+width: 35px;
+height: 35px;
+line-height: 35px;
+  }
+}
+
+.saasappoint-inline-calendar-container-main-rowcel::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.saasappoint-inline-calendar-container-main-rowcel.today_date {
+  background: purple !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.booked_date,
+.saasappoint-inline-calendar-container-main-rowcel.previous_date {
+  background: lightgrey !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.first_half_available_date {
+  background: linear-gradient(180deg, #4BDE6D 50%, #22A9D0 50%) !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.second_half_available_date {
+  background: linear-gradient(180deg, #22A9D0 50%, #4BDE6D 50%) !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.full_day_off {
+  background: #22A9D0 !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.full_day_available {
+  background: #4BDE6D !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.full_day_available:hover p ,
+.saasappoint-inline-calendar-container-main-rowcel.today_date:hover p ,
+.saasappoint-inline-calendar-container-main-rowcel.second_half_available_date:hover p ,
+.saasappoint-inline-calendar-container-main-rowcel.first_half_available_date:hover p {
+  background: #000 !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.active_selected_date p {
+  background: #000 !important;
+}
+.saasappoint-inline-calendar-container-main-rowcel.isSelected {
+  background-color: #004b8f;
+}
+.saasappoint-inline-calendar-container-main-rowcel.isSelected p {
+  background: #000;
+}
+.saasappoint-inline-calendar-container-main-rowcel.isToday {
+  background-color: rgba(245, 113, 112, 0.2);
+}
+.saasappoint-inline-calendar-container-main-rowcel.isToday p {
+  background: rgba(245, 113, 112, 0.4);
+}
+.saasappoint-inline-calendar-container-main-rowcel.other_month {
+  color: rgba(255, 255, 255, 0.2);
+}
+/* custom */
+.saasappoint_center_title{
+	text-align:center;
+	float: left;
+	width:33.33333%;
+	font-size:18px
+}
+.saasappoint_prev_icon{
+	float: left;
+	width:33.33333%;
+	text-align:left;
+}
+.saasappoint_next_icon{
+	float:left;
+	width:33.33333%;
+	text-align:right;
+}
+.saasappoint_pagi_cal_div{
+	border-bottom: 1px solid lightgrey;
+}
+
+.saasappoint_back_to_calendar label{
+	color: black;
+	cursor: pointer;
+}
+.saasappoint-inline-calendar-container-main-rowcel.previous_date p {
+	color: #717171;
+}
+.saasappoint-inline-calendar-container-main-rowcel.previous_date,
+.saasappoint-inline-calendar-container-main-rowcel.full_day_off {
+	cursor: no-drop !important;
+}
+
+.saasappoint_full_day_available_label,
+.saasappoint_fhalf_available_label,
+.saasappoint_shalf_available_label,
+.saasappoint_full_day_off_label{
+	padding:4px;
+}
+.saasappoint_full_day_available_label span{
+	background: #4BDE6D !important;
+	padding: 0px 10px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+.saasappoint_fhalf_available_label span{
+	background: linear-gradient(180deg, #4BDE6D 50%, #22A9D0 50%) !important;
+	padding: 0px 10px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+.saasappoint_shalf_available_label span{
+	background: linear-gradient(180deg, #22A9D0 50%, #4BDE6D 50%) !important;
+	padding: 0px 10px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+.saasappoint_full_day_off_label span{
+	background: #22A9D0 !important;
+	padding: 0px 10px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+.saasappoint_selected_slot_detail{
+	display:none;
+}

@@ -1,0 +1,14 @@
+Categories:
+#,"Category Name",Status
+1,"Pakej Perkahwinan",Activated
+Services:
+#,Category,"Service Title","Service Description",Status
+1,"Pakej Perkahwinan","Pakej Perkahwinan","Terma &amp; Peringatan Penting
+1. Caj tambahan RM500.00 akan dikenakan jika ada penambahan kerusi bankuet &amp; penggunaan Dataran Sri/Pagola
+2. Penggunaan dewan (Hari Persediaan) selepas jam 7.00 malam akan dikenakan caj sebanyak RM250.00 tertakluk sehingga jam 12.00 malam. (Permintaan masa selain waktu yang ditetapkan tertakluk kepada kebenaran dan budi bicara pihak UTM TTC dengan caj yang sama
+3. Susun atur adalah seperti yang disediakan. Walaubagaimanapun pengguna boleh mengubah susun atur tersebut mengikut perancangan sendiri. Caj sebanyak RM200.00 jika pengguna meminta pihak UTM TTC membuat perubahan tersebut",Activated,360,15,15
+Addons:
+#,Category,Service,"Addon Title","Addon Rate","Multiple Quantity",Status
+1,"Pakej Perkahwinan","Pakej Perkahwinan","Meja Bulat",RM15,Yes,Activated
+2,"Pakej Perkahwinan","Pakej Perkahwinan",Kerusi,RM15,Yes,Activated
+3,"Pakej Perkahwinan","Pakej Perkahwinan","Audio Sistem",RM25,Yes,Activated

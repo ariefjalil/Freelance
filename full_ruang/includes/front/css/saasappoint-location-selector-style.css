@@ -1,0 +1,448 @@
+/*
+* SaasAppoint
+* Online Multi Business Appointment Scheduling & Reservation Booking Calendar
+*/
+.saasappoint header,
+.saasappoint nav,
+.saasappoint section {
+    display: block
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body.saasappoint {
+    margin: 0;
+	background: #9087ba;
+}
+
+.saasappoint a:focus {
+    outline: thin dotted
+}
+
+.saasappoint a:active,
+.saasappoint a:hover {
+    outline: 0
+}
+
+.saasappoint h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+.saasappoint b,
+.saasappoint strong {
+    font-weight: 700
+}
+
+.saasappoint hr {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+.saasappoint img {
+    border: 0
+}
+
+.saasappoint button,
+.saasappoint input,
+.saasappoint select,
+.saasappoint textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+.saasappoint button,
+.saasappoint input {
+    line-height: normal
+}
+
+.saasappoint button,
+.saasappoint select {
+    text-transform: none
+}
+
+.saasappoint button,
+.saasappoint  input[type=button],
+.saasappoint input[type=reset],
+i.saasappoint nput[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+.saasappoint button[disabled],
+.saasappoint  input[disabled] {
+    cursor: default
+}
+
+.saasappoint input[type=checkbox],
+.saasappoint input[type=radio] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0
+}
+
+.saasappoint button::-moz-focus-inner,
+.saasappoint input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.saasappoint textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+.saasappoint h1 {
+    font-size: 72px;
+    color: #fff
+}
+
+@media(max-width:992px) {
+    .saasappoint h1 {
+        font-size: 52px
+    }
+}
+
+@media(max-width:576px) {
+    .saasappoint h1 {
+        font-size: 40px
+    }
+}
+
+.saasappoint h2 {
+    font-size: 20px; /*58px*/
+    color: #3f4b5e;
+}
+
+@media(max-width:576px) {
+    .saasappoint h2 {
+        font-size: 15px; /*34px*/
+    }
+}
+
+.saasappoint h3 {
+    font-size: 35px;
+    color: #3f4b5e
+}
+
+@media(max-width:768px) {
+    .saasappoint h3 {
+        font-size: 27px
+    }
+}
+
+.saasappoint h4 {
+    font-size: 24px;
+    color: #3f4b5e
+}
+
+.saasappoint h5 {
+    font-size: 22px
+}
+
+.saasappoint h6 {
+    font-size: 18px
+}
+
+.saasappoint p {
+    font-size: 15px;
+    color: #3d3d3d
+}
+
+.saasappoint-main-block-before {
+    padding: 20px 0
+}
+
+.saasappoint-center-block h2 {
+    text-align: center;
+    color: #3f4b5e;
+    margin: 0 0 30px
+}
+
+.saasappoint-center-block h2 span {
+    color: #45c3d3;
+    border-bottom: 3px solid #45c3d3
+}
+
+.saasappoint-center-block h6 {
+    text-align: center;
+    color: #3d3d3d;
+    font-weight: 300;
+    margin: 10px auto 0;
+    line-height: 1.6
+}
+
+@media(max-width:992px) {
+    .saasappoint-center-block h6 {
+        width: 70%
+    }
+}
+
+@media(max-width:576px) {
+    .saasappoint-center-block h6 {
+        width: 100%
+    }
+}
+
+.saasappoint-booking-detail-block {
+    background: #9087ba
+}
+
+.saasappoint-booking-detail-block h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0
+}
+
+.saasappoint-booking-detail-block h6 {
+    margin: 10px auto 0
+}
+
+.saasappoint-set-sm-fit {
+    width: 100%
+}
+
+@media(max-width:992px) {
+    .saasappoint-set-sm-fit {
+        max-width: 100%;
+        -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+        flex: 100%
+    }
+}
+
+.saasappoint_location_selector_container_bg{
+    background: #fff;
+    padding: 1px 40px
+}
+
+.saasappoint-booking-detail-main {
+    background: #fff;
+    padding: 28px 40px 1px 40px
+}
+
+/* Custom CSS */
+.saasappoint-block-btn {
+    background: #422f8f;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0;
+    -webkit-appearance: none!important;
+    border: 0
+}
+
+.saasappoint-block-btn:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0
+}
+
+.saasappoint-block-btn:hover {
+    color: #fff;
+    text-decoration: none;
+    background: #251857;
+}
+
+.saasappoint-block-btn span {
+    margin-right: 10px
+}
+
+@media(max-width:480px) {
+    .saasappoint-block-btn {
+        font-size: 18px
+    }
+}
+.saasappoint .saasappoint-companytitle{
+	font-size:xx-large;
+	color: #9087ba;
+	cursor: pointer;
+}
+.saasappoint .saasappoint-companylogo{
+	height: 100px;
+}
+
+/** Loader CSS START **/
+.saasappoint_hide_loader{
+	display:none;
+}
+.saasappoint_show_loader{
+	display:none;
+}
+#saasappoint-loader-overlay{
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #000000;
+	opacity: .5;
+}
+#saasappoint-loader {
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -20%;
+    width: 250px;
+	z-index: 999999;
+}
+#saasappoint-loader .saasappoint-loader-dot {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot::before {
+    border-radius: 100%;
+    content: "";
+    height: 120px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1) {
+    transform: rotate(45deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1)::before {
+    animation: 0.8s linear 0.1s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2) {
+    transform: rotate(90deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2)::before {
+    animation: 0.8s linear 0.2s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3) {
+    transform: rotate(135deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3)::before {
+    animation: 0.8s linear 0.3s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4) {
+    transform: rotate(180deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4)::before {
+    animation: 0.8s linear 0.4s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5) {
+    transform: rotate(225deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5)::before {
+    animation: 0.8s linear 0.5s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6) {
+    transform: rotate(270deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6)::before {
+    animation: 0.8s linear 0.6s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7) {
+    transform: rotate(315deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7)::before {
+    animation: 0.8s linear 0.7s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8) {
+    transform: rotate(360deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8)::before {
+    animation: 0.8s linear 0.8s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-loading {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: -40px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 180px;
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+/** Loader CSS END **/
+
+.saasappoint-location-selector-bg {
+	background-color: #422f8f;
+}
+.saasappoint-location-selector-bg {
+	background-image: url("../images/location-selector-bg.jpeg");
+	/* filter: blur(8px);
+	-webkit-filter: blur(8px); */
+	padding: 28px 40px;
+	height: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/** search box css **/
+.saasappoint-form-control-borderless {
+    border: none;
+}
+
+.saasappoint-form-control-borderless:hover, .saasappoint-form-control-borderless:active, .saasappoint-form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.saasappoint-footer-bg{
+	background-color: #422f8f !important;
+}
+
+#saasappoint_location_selector_form .card.card-sm{
+	width: 40%;
+}
+
+@media(max-width:480px) {
+    #saasappoint_location_selector_form .card.card-sm{
+        width: 100%;
+    }
+}

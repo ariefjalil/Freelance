@@ -1,0 +1,166 @@
+/*!
+ * CSS FOR INSTALLATION INSTRUCTION PAGE
+ * By: SaasAppoint
+ */
+ /*
+* Online Multi Business Appointment Scheduling & Reservation Booking Calendar
+*/
+
+body {
+  font-family: 'Lato';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Catamaran';
+  font-weight: 800 !important;
+}
+
+.saasappoint-bg-black {
+  background-color: #000 !important;
+}
+
+header.saasappoint-main-header {
+  position: relative;
+  overflow: hidden;
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
+  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header.saasappoint-main-header .saasappoint-main-header-content {
+  z-index: 1;
+  position: relative;
+}
+
+header.saasappoint-main-header .saasappoint-main-header-content .saasappoint-main-header-heading {
+  font-size: 4rem;
+}
+
+header.saasappoint-main-header .saasappoint-main-header-content .saasappoint-main-header-subheading {
+  font-size: 2rem;
+}
+
+header.saasappoint-main-header .saasappoint-bg-header-circle {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+  background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+}
+
+header.saasappoint-main-header .saasappoint-bg-header-circle-1 {
+  height: 90rem;
+  width: 90rem;
+  bottom: -55rem;
+  left: -55rem;
+}
+
+header.saasappoint-main-header .saasappoint-bg-header-circle-2 {
+  height: 50rem;
+  width: 50rem;
+  top: -25rem;
+  right: -25rem;
+}
+
+header.saasappoint-main-header .saasappoint-bg-header-circle-3 {
+  height: 20rem;
+  width: 20rem;
+  bottom: -10rem;
+  right: 5%;
+}
+
+header.saasappoint-main-header .saasappoint-bg-header-circle-4 {
+  height: 30rem;
+  width: 30rem;
+  top: -5rem;
+  right: 35%;
+}
+
+@media (min-width: 992px) {
+  header.saasappoint-main-header {
+    padding-top: calc(10rem + 55px);
+    padding-bottom: 10rem;
+  }
+  header.saasappoint-main-header .saasappoint-main-header-content .saasappoint-main-header-heading {
+    font-size: 6rem;
+  }
+  header.saasappoint-main-header .saasappoint-main-header-content .saasappoint-main-header-subheading {
+    font-size: 4rem;
+  }
+}
+
+.saasappoint-logo-img img{
+	padding-bottom: 5%;
+}
+
+.saasappoint-main-section-bg{
+	background-color: antiquewhite;
+}
+/*******************************************************************************/
+/*******************************************************************************/
+.saasappoint-instruction-steps {
+	margin-bottom: 60px;
+	position: relative;
+}
+.saasappoint-instruction-steps-main {
+	position: absolute;
+	top: 217px;
+	left: -355px;
+	background: #f6f6f6;
+	width: 544px;
+	height: 110px;
+	transform: rotate(-90deg);
+	border-radius: 50px;
+	box-shadow: 0px 2px 11px -2px rgba(0,0,0,0.4);
+}
+.saasappoint-instruction-steps-main h4 {
+	font-size: 54px;
+	padding-top: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color:#ff6a00;
+	font-weight: 800;
+}
+.saasappoint-bg-theme {
+	color: #ee0979;
+}
+.saasappoint-instruction-steps .panel {
+	border-radius: 60px;
+	/* border-bottom-left-radius: 60px; */
+	color:#fff;
+	font-size: 16px;
+	background: -webkit-gradient(linear, left bottom, left top, from(#ee0979), to(#ff6a00));
+	background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+	box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.4);
+	margin-bottom:15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.saasappoint-instruction-steps .panel span,
+.saasappoint-instruction-steps .panel:hover span  {
+	-webkit-transition: all ease-out 0.3s;
+	-moz-transition: all ease-out 0.3s;
+	-o-transition: all ease-out 0.3s;
+	transition: all ease-out 0.3s;
+}
+.saasappoint-instruction-steps .panel-body {
+	height: auto;
+}
+.saasappoint-instruction-steps .panel:nth-child(even) span {
+	color: #ff6a00;
+}
+.saasappoint-instruction-steps .saasappoint-instruction-steps-heading {
+	font-size: 28px;
+	margin-top: 0px;
+	padding-top:15px;
+}

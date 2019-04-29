@@ -1,0 +1,223 @@
+/*
+* SaasAppoint
+* Online Multi Business Appointment Scheduling & Reservation Booking Calendar
+*/
+.saasappoint .saasappoint-register-main{
+    background: #DE6262;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #731f23, #731f23);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #731f23, #731f23); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	float:left;
+	width:100%;
+	padding : 50px 0;
+}
+.saasappoint .saasappoint-register-container{
+	background:#fff;
+	border-radius: 10px;
+	box-shadow:15px 20px 0px rgba(0,0,0,0.1);
+}
+.saasappoint .saasappoint-register-right-block{
+	padding: 50px 30px;
+	position:relative;
+}
+.saasappoint .saasappoint-register-right-block h2{
+	margin-bottom:30px;
+	font-weight:800;
+	font-size:30px;
+	color: #DE6262;
+}
+.saasappoint .saasappoint-register-right-block h2:after{
+	content:" ";
+	width:100px;
+	height:5px;
+	background:#FEB58A;
+	display:block;
+	margin-top:20px;
+	border-radius:3px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.saasappoint .saasappoint_register_btn{
+	background: #DE6262;
+	color:#fff;
+	font-weight:600;
+}
+.saasappoint .saasappoint-register-center-block-title{
+	color: #FFF;
+}
+.saasappoint .saasappoint-border-right{
+	border-right: 3px double #ef8b8b;
+}
+#saasappoint_accept_admin_tandc,
+#saasappoint_accept_customer_tandc{
+	margin-top: 0.47rem;
+}
+.error,
+#saasappoint_register_plan_card_errors{
+	color: red;
+}
+#saasappoint_register_plans_radio_error,
+#saasappoint_accept_admin_tandc_error{
+	display: none;
+}
+
+
+
+/** Loader CSS START **/
+.saasappoint_hide_loader{
+	display:none;
+}
+.saasappoint_show_loader{
+	display:none;
+}
+#saasappoint-loader-overlay{
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	background-color: #000000;
+	opacity: .5;
+}
+#saasappoint-loader {
+    bottom: 0;
+    height: 250px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: -20%;
+    width: 250px;
+	z-index: 999999;
+}
+#saasappoint-loader .saasappoint-loader-dot {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot::before {
+    border-radius: 100%;
+    content: "";
+    height: 120px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: scale(0);
+    width: 120px;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1) {
+    transform: rotate(45deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+1)::before {
+    animation: 0.8s linear 0.1s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2) {
+    transform: rotate(90deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+2)::before {
+    animation: 0.8s linear 0.2s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3) {
+    transform: rotate(135deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+3)::before {
+    animation: 0.8s linear 0.3s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4) {
+    transform: rotate(180deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+4)::before {
+    animation: 0.8s linear 0.4s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5) {
+    transform: rotate(225deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+5)::before {
+    animation: 0.8s linear 0.5s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6) {
+    transform: rotate(270deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+6)::before {
+    animation: 0.8s linear 0.6s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7) {
+    transform: rotate(315deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+7)::before {
+    animation: 0.8s linear 0.7s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8) {
+    transform: rotate(360deg);
+}
+#saasappoint-loader .saasappoint-loader-dot:nth-child(7n+8)::before {
+    animation: 0.8s linear 0.8s normal none infinite running saasappoint-loader-load;
+    background: #FFFFFF none repeat scroll 0 0;
+}
+#saasappoint-loader .saasappoint-loader-loading {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    bottom: -40px;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 180px;
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+@keyframes saasappoint-loader-load {
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+}
+/** Loader CSS END **/
+
+.saasappoint-card-payment-div{
+	display: none;
+	border: 1px solid #ced4da;
+	border-radius: 5px;
+}
+
+.saasappoint-bs-border-shadow a{
+	text-decoration:none;
+}
+.saasappoint-bs-border-shadow{
+	background: #DE6262;
+	background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262);
+	background: linear-gradient(to bottom, #FFB88C, #DE6262);
+	box-shadow: 0 12px 16px 0 rgba(255, 57, 0, 0.2), 0 17px 50px 0 rgba(118, 34, 14, 0.2);
+	border:  2px dashed rgba(255, 57, 0, 0.24);
+}
+.saasappoint-bs-border-shadow:hover{
+	border:  5px dashed rgba(255, 57, 0, 0.24);
+}
+#saasappoint_accept_customer_tandc{
+	display: none;
+}
+.saasappoint-text-float-right{
+	text-align: right;
+	float: right;
+}
+
+.intl-tel-input.allow-dropdown.separate-dial-code{
+	width: 100%
+}
